@@ -17,3 +17,16 @@
     text-align: center;
     padding: 40px;
 }
+
+#startBtn {
+    color: white;
+    background-color: rgb(59, 59, 59);
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid rgb(38, 38, 38);
+    padding: 4px 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
