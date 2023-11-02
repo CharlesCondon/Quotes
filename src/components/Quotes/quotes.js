@@ -4,7 +4,7 @@ import { useState } from 'react';
 import data from '../../assets/quotes.json';
 
 function Quotes() {
-    const[head, setHead] = useState('Click to Generate a Quote or Poem');
+    const[head, setHead] = useState('Click Next to Generate a Quote or Poem');
     const[auth, setAuth] = useState('');
     const[seen, setSeen] = useState([]);
 
@@ -32,10 +32,10 @@ function Quotes() {
 
     return (
         <>
-            <div id='contentContainer'>
-                <h2>{head}</h2>
-                <p>{auth}</p>
-                <button id='startBtn' onClick={addQuote}>Next</button>
+            <div id='contentContainer' className='animate__animated animate__fadeIn'>
+                <h2 className='animate__animated animate__fadeIn'>{head}</h2>
+                <p className='animate__animated animate__fadeIn'>{auth}</p>
+                <button id='startBtn' className='animate__animated animate__fadeIn' onClick={addQuote}>Next</button>
             </div>
         </>
     )

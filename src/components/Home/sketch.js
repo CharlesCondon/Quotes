@@ -20,7 +20,7 @@ function sketch(p) {
         this.show = function() {
             var thick = p.map(this.z, 0, 20, 1, 3);
             p.strokeWeight(thick);
-            p.stroke(6, 12, 34);
+            p.stroke(11, 14, 53);
             p.line(this.x, this.y, this.x, this.y + this.len);
         }
     }
@@ -35,7 +35,7 @@ function sketch(p) {
     }
 
     p.draw = function() {
-        p.background(4, 5, 18);
+        p.background(4, 6, 34);
             for (let i = 0; i < drops.length; i++) {
                 drops[i].fall();
                 drops[i].show();

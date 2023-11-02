@@ -1,7 +1,7 @@
 #contentContainer {
     z-index: 10;
-    color: white;
-    border: 7px double rgba(0,0,0,.5);
+    color: #efe4cd;
+    border: 7px double rgba(50,50,50,1);
     border-radius: 10px;
     background-color: rgba(30,30,30,.3);
     position: fixed;
@@ -16,10 +16,11 @@
     align-items: center;
     text-align: center;
     padding: 40px;
+    font-family: Cormorant-Garamond;
 }
 
 #startBtn {
-    color: white;
+    color: #efe4cd;
     background-color: rgb(59, 59, 59);
     font-size: 16px;
     border-radius: 5px;
@@ -29,4 +30,15 @@
     bottom: 10px;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: Cormorant-Garamond;
 }
+#startBtn:hover {
+    background-color: rgb(81, 81, 81);
+}
+#startBtn:active {
+    background-color: rgb(49, 49, 49);
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 4s;
+  }
