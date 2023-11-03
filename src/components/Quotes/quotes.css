@@ -1,11 +1,9 @@
 #contentContainer {
     z-index: 10;
-    color: #efe4cd;
-    border: 7px double rgba(50,50,50,1);
-    border-radius: 10px;
-    background-color: rgba(30,30,30,.3);
+    color: rgb(224, 210, 179);
+    border-radius: 5px;
     position: fixed;
-    width: 50vw;
+    width: 55vw;
     height: 30vh;
     top: 50%;
     left: 50%;
@@ -17,6 +15,13 @@
     text-align: center;
     padding: 40px;
     font-family: Cormorant-Garamond;
+    
+}
+.blurBG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
 }
 
 #startBtn {
@@ -24,21 +29,35 @@
     background-color: rgb(59, 59, 59);
     font-size: 16px;
     border-radius: 5px;
-    border: 2px solid rgb(38, 38, 38);
-    padding: 4px 15px;
+    border: 2px solid rgba(163,135,66,.3);
+    padding: 4px 25px;
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Cormorant-Garamond;
+    opacity: 1;
 }
 #startBtn:hover {
     background-color: rgb(81, 81, 81);
+    color: #f4e9d1;
 }
 #startBtn:active {
     background-color: rgb(49, 49, 49);
+    color: #cabc9f;
 }
 
 .animate__animated.animate__fadeIn {
     --animate-duration: 4s;
-  }
+}
+
+.words {
+    z-index: 15;
+}
+
+@media only screen and (max-width: 800px) {
+    #startBtn {
+        font-size: 20px;
+        padding: 4px 55px;
+    }
+}

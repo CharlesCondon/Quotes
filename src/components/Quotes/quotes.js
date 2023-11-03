@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './quotes.css';
 import { useState } from 'react';
 import data from '../../assets/quotes.json';
@@ -29,14 +29,19 @@ function Quotes() {
             setAuth(a);
         }
     }
+    // function handleMouseMove(e) {
+    //     console.log(e)
+    // }
 
     return (
         <>
             <div id='contentContainer' className='animate__animated animate__fadeIn'>
-                <h2 className='animate__animated animate__fadeIn'>{head}</h2>
-                <p className='animate__animated animate__fadeIn'>{auth}</p>
-                <button id='startBtn' className='animate__animated animate__fadeIn' onClick={addQuote}>Next</button>
+                <div className='blurBG'></div>
+                <h2 className='animate__animated animate__fadeIn words'>{head}</h2>
+                <p className='animate__animated animate__fadeIn words'>{auth}</p>
+                
             </div>
+            <button id='startBtn' className='animate__animated animate__fadeIn words' onClick={addQuote}>Next</button>
         </>
     )
 }
