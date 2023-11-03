@@ -98,4 +98,10 @@
         border-top: 8px solid rgba(22, 22, 29, 1);
         border-right: 8px solid rgba(22, 22, 29, 1);
     }
+    #backgroundImg {
+        opacity: .03;
+    }
+    #contentContainer {
+        width: 75vw;
+    }
 }
