@@ -4,7 +4,7 @@ import { useState } from 'react';
 import data from '../../assets/quotes.json';
 
 function Quotes() {
-    const[head, setHead] = useState('Click Next to Generate a Quote or Poem');
+    const[head, setHead] = useState('Click Next for a Quote or Poem');
     const[auth, setAuth] = useState('');
     const[seen, setSeen] = useState([]);
 
@@ -29,17 +29,25 @@ function Quotes() {
             setAuth(a);
         }
     }
-    // function handleMouseMove(e) {
-    //     console.log(e)
-    // }
 
     return (
         <>
+            <img id='backgroundImg' src='./background.png' alt='sky'/>
+            <div id='windowCont'>
+                <div id='topPane' className='paneRow'>
+                    <div className='pane'></div>
+                    <div className='pane'></div>
+                    <div className='pane'></div>
+                </div>
+                <div id='bottomPane' className='paneRow'>
+                    <div className='pane'></div>
+                    <div className='pane'></div>
+                    <div className='pane'></div>
+                </div>
+            </div>
             <div id='contentContainer' className='animate__animated animate__fadeIn'>
-                <div className='blurBG'></div>
-                <h2 className='animate__animated animate__fadeIn words'>{head}</h2>
+                <h2 id='quote-top' className='animate__animated animate__fadeIn words'>{head}</h2>
                 <p className='animate__animated animate__fadeIn words'>{auth}</p>
-                
             </div>
             <button id='startBtn' className='animate__animated animate__fadeIn words' onClick={addQuote}>Next</button>
         </>

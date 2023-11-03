@@ -31,7 +31,6 @@ function sketch(p) {
             for (let i = 0; i < 500; i++) {
                 drops[i] = new Drop();
         }
-        // initCanvas.parent("backgroundCont");
     }
 
     p.draw = function() {
