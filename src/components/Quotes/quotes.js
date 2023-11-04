@@ -58,6 +58,7 @@ function Quotes() {
                 <h2 id='quote-top' className='animate__animated animate__fadeIn words'>{head}</h2>
                 <p className='animate__animated animate__fadeIn words'>{auth}</p>
             </div>
+            <img id='nextImg' className='animate__animated animate__fadeIn' src='./next.png' alt='next arrow' onClick={addQuote}/>
             <button id='startBtn' className='animate__animated animate__fadeIn words' onClick={addQuote}>Next</button>
         </>
     )

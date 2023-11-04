@@ -41,6 +41,15 @@
     color: #cabc9f;
 }
 
+#nextImg {
+    display: none;
+    transition: all .1s linear;
+}
+#nextImg:active {
+    filter: brightness(.5);
+    width: 38px;
+}
+
 .animate__animated.animate__fadeIn {
     --animate-duration: 1s;
 }
@@ -116,5 +125,16 @@
     }
     #contentContainer {
         width: 75vw;
+    }
+    #nextImg {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+    }
+    #startBtn {
+        display: none;
     }
 }
