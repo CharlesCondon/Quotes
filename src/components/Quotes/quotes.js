@@ -9,6 +9,7 @@ function Quotes() {
     const[seen, setSeen] = useState([]);
 
     function addQuote() {
+        
         let n = Math.floor(Math.random() * data.quotes.length);
         let quote = data.quotes[n].quote;
         let author = data.quotes[n].author;
@@ -24,9 +25,14 @@ function Quotes() {
             addQuote();
         }
         else {
-            setSeen([...seen, q]);
-            setHead(q);
-            setAuth(a);
+            let x = document.getElementById('contentContainer')
+            x.classList.add('roll-out')
+            setTimeout(() => {
+                setSeen([...seen, q]);
+                setHead(q);
+                setAuth(a); 
+            }, 500)
+
         }
     }
 
@@ -45,7 +51,7 @@ function Quotes() {
                     <div className='pane'></div>
                 </div>
             </div>
-            <div id='contentContainer' className='animate__animated animate__fadeIn'>
+            <div key={Math.random()} id='contentContainer' className='animate__animated animate__fadeIn'>
                 <h2 id='quote-top' className='animate__animated animate__fadeIn words'>{head}</h2>
                 <p className='animate__animated animate__fadeIn words'>{auth}</p>
             </div>
