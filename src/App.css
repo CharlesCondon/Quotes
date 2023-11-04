@@ -4,6 +4,7 @@ html, body {
 }
 
 main {
+    background-color: rgb(33, 33, 44);
     position: fixed;
     left: 0;
     top: 0;
