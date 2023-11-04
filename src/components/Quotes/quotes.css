@@ -30,6 +30,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Cormorant-Garamond;
+    transition: all .1s linear;
     opacity: 1;
 }
 #startBtn:hover {
@@ -37,8 +38,9 @@
     color: #f4e9d1;
 }
 #startBtn:active {
-    background-color: rgb(49, 49, 49);
+    background-color: rgb(38, 38, 38);
     color: #cabc9f;
+    padding: 3px 23px;
 }
 
 #nextImg {
@@ -46,8 +48,8 @@
     transition: all .1s linear;
 }
 #nextImg:active {
-    filter: brightness(.5);
-    width: 38px;
+    filter: brightness(.6);
+    width: 39px;
 }
 
 .animate__animated.animate__fadeIn {
