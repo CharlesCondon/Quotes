@@ -7,7 +7,7 @@ function Quotes() {
     const[head, setHead] = useState('Click Next for a Quote or Poem');
     const[auth, setAuth] = useState('');
     const[seen, setSeen] = useState([]);
-
+    
     function addQuote() {
         
         let n = Math.floor(Math.random() * data.quotes.length);
@@ -16,16 +16,19 @@ function Quotes() {
         return quoteHelper(quote, author, data.quotes.length)
     }
     function quoteHelper(q, a, n) {
+        let x = document.getElementById('contentContainer');
         if (seen.length === n) {
-            setSeen([]);
-            setHead('End')
-            setAuth('')
+            x.classList.add('roll-out')
+            setTimeout(() => {
+                setSeen([]);
+                setHead('End')
+                setAuth('')
+            }, 500)
         }
         else if (seen.includes(q)) {
             addQuote();
         }
         else {
-            let x = document.getElementById('contentContainer')
             x.classList.add('roll-out')
             setTimeout(() => {
                 setSeen([...seen, q]);

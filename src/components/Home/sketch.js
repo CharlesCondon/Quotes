@@ -36,7 +36,7 @@ function sketch(p) {
             }
         }
         else {
-            for (let i = 0; i < 250; i++) {
+            for (let i = 0; i < 300; i++) {
                 drops[i] = new Drop();
             }
         }
