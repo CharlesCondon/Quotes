@@ -13,6 +13,7 @@ function sketch(p) {
         
             if (this.y > p.height) {
                 this.y = p.random(-200, -100);
+                
                 this.yspeed = p.map(this.z, 0, 20, 4, 10);
             }
         }
@@ -28,10 +29,20 @@ function sketch(p) {
 
     p.setup = function() {
         p.createCanvas(window.innerWidth, window.innerHeight);
+        let w = p.width;
+        if (w > 800) {
             for (let i = 0; i < 500; i++) {
                 drops[i] = new Drop();
+            }
         }
+        else {
+            for (let i = 0; i < 250; i++) {
+                drops[i] = new Drop();
+            }
+        }
+            
     }
+    
 
     p.draw = function() {
         p.background(33, 33, 44);
